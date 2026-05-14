@@ -7,6 +7,7 @@ import "./env-config.js";
 import { fileURLToPath } from "url";
 import adminRoutes from "./routes/admin.routes.js";
 import candidateRoutes from "./routes/candidate.routes.js";
+import enquiryRoutes from "./routes/enquiry.routes.js";
 import jobRoutes from "./routes/jobs.routes.js";
 import testimonialRoutes from "./routes/testimonial.routes.js";
 
@@ -24,6 +25,7 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 app.use("/api/v1/candidate", candidateRoutes);
 app.use("/api/v1/testimonial", testimonialRoutes);
+app.use("/api/v1/enquiry", enquiryRoutes);
 
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 export default app;
