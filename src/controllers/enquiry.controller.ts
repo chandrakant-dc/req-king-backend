@@ -64,7 +64,7 @@ export const createGeneralInquiry = async (req: Request, res: Response) => {
 
         res.status(201).json({
             success: true,
-            message: "General Inquiry created successfully",
+            message: "General Enquiry submitted successfully",
             data: newInquiry
         })
 
@@ -72,7 +72,7 @@ export const createGeneralInquiry = async (req: Request, res: Response) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Failed to create general inquiry",
+            message: "Failed to submit general inquiry",
             error
         })
     }
@@ -223,12 +223,12 @@ export const createJobInquiry = async (req: Request, res: Response) => {
         await cate.save();
         return res.status(201).json({
             status: true,
-            message: "job inquiry created successfully"
+            message: "job enquiry submitted successfully"
         })
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Failed to create job inquiry",
+            message: "Failed to submit job inquiry",
             error
         })
     }
@@ -339,7 +339,7 @@ export const createBusinessInquiry = async (req: Request, res: Response) => {
 
         res.status(201).json({
             success: true,
-            message: "Business inquiry created successfully",
+            message: "business enquiry submitted successfully",
             data: newBusinessInquiry
         })
 
@@ -347,7 +347,7 @@ export const createBusinessInquiry = async (req: Request, res: Response) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Failed to create business inquiry",
+            message: "Failed to submit business inquiry",
             error
         })
     }
